@@ -113,10 +113,10 @@
         .then(response => response.json())
         .then(options => {
     const selectElement = document.getElementById('input_3');
-    options.data.buyer.forEach(option => {
+    options.data.forEach(option => {
         const optionElement = document.createElement('option');
-        optionElement.value = option;
-        optionElement.textContent = option;
+        optionElement.value = option.BUYER;
+        optionElement.textContent = option.BUYER;
         selectElement.appendChild(optionElement);
     });
         });
